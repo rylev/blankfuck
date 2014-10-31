@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+while x = $stdin.getc
+  y = case x
+  when '>' then ' '
+  when '<' then "\b"
+  when '+' then "\t"
+  when '-' then "\v"
+  when '.' then "\f"
+  when ',' then "\a"
+  when '[' then "\n"
+  when ']' then "\r"
+  else
+    ''
+  end
+  print y
+end
